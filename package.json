@@ -1,0 +1,14 @@
+{
+    "repositories": [ {
+        "type": "package",
+        "package": {
+            "name": "madsem/openwrt-config",
+            "version": "1.0.0",
+            "source": {
+                "url": "https://github.com/madsem/openwrt-router-config.git",
+                "type": "git",
+                "reference": "master"
+              }
+         }
+    }]
+}
