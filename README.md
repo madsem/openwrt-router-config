@@ -234,13 +234,13 @@ config forwarding
 	option dest 'wan_vpn'
 
 config rule
-	option name 'Prevent-IPV6-Leak-VPN'
+    option name 'Prevent-IPV6-Leak-VPN'
     option family 'ipv6'
     list proto 'all'
     option src 'lan'
     option dest 'wan'
     option target 'DROP'
-	option src_mac '<MAC:ADDRESS> <MAC:ADDRESS> <MAC:ADDRESS>'
+    option src_mac '<MAC:ADDRESS> <MAC:ADDRESS> <MAC:ADDRESS>'
 ```
 
 
