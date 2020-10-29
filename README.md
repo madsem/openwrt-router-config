@@ -296,12 +296,10 @@ cat wg.key
 cat wg.pub
 ```
 
-Now use the private key in the `wg_rd_warrior` interface below.
-
 #### Configure Wireguard on your Road Warrior Devices:
 - Install WireGuard app on every device you want to be able to connect back home as a `Road Warrior`. 
 
-- Use the public key (wg.pub) from above, in the `PublicKey` option of the `[Peer]` section in the Wireguard app on each device.
+- Use the public key `(wg.pub)` from above, in the `PublicKey` option of the `[Peer]` section in the Wireguard app on each device.
 
 - Under the `Addresses` option on each device, enter the corresponding value from `list addresses` below.
 
@@ -324,7 +322,8 @@ PersistentKeepalive = 25
 Save config on each device, then you can see the `Public key` for that new Road Warrior device, which you need to fill into each of the peers below `option public_key`.
 
 #### Continue with Router Network Config:
-Fill in this public key for each device, in the `public_key` option of each peer in the config below.
+Use the private key from router `(wg.key)` in the `wg_rd_warrior` interface below.
+Fill in this public key from each Road Warrior device, in the `public_key` option of each peer in the config below.
 
 Then append the adjusted config below into the network config file:
 ```bash
