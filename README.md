@@ -162,15 +162,9 @@ config host
 	option dns '1'
 	option name 'ipad'
 	option ip '192.168.1.196'
-
-config host
-	option mac '<MAC:ADDRESS>'
-	option leasetime '900'
-	option dns '1'
-	option name 'iphone'
-	option ip '192.168.1.197'
 ```
 
+**NOTE**: iOS now uses rotating MAC addresses to reduce tracking across wifi networks. Best not to give those devices a static IP as it gives DHCP errors in log.
 
 ### /etc/config/firewall:
 Make sure the firewall rules for `lan`, `wan` are configured like below, and that `lan` is allowed to forward to `wan`.
